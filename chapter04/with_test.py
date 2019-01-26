@@ -12,7 +12,7 @@ def exe_try():
         return 3
     finally:
         print ("finally")
-        # return 4
+        return 4
 
 #上下文管理器协议
 class Sample:

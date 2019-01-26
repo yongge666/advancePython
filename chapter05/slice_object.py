@@ -30,6 +30,7 @@ class Group:
 
 staffs = ["bobby1", "imooc", "bobby2", "bobby3"]
 group = Group(company_name="imooc", group_name="user", staffs=staffs)
+
 reversed(group)
 for user in group:
     print(user)
