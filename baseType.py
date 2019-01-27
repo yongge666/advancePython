@@ -238,13 +238,25 @@ print("a:{1} b:{0} c:{2}".format(a,b,c))#a:2 b:1 c:3
 
 # 六.deque 双端队列
 print("===================================deque==========================")
+import bisect
 from collections import deque
 queue_demo = deque([1,2,3,4,5])
-## 1.从头部删除
+## 1. 用来处理已排序的序列，用来维持已排序的序列（内部通过二分查找实现）
+inter_list = deque()
+bisect.insort(inter_list, 3)
+bisect.insort(inter_list, 2)
+bisect.insort(inter_list, 5)
+bisect.insort(inter_list, 1)
+bisect.insort(inter_list, 6)
+
+print(bisect.bisect_left(inter_list, 3))
+#学习成绩
+print(inter_list)
+## 1.1从头部删除
 queue_demo.popleft()
 print(queue_demo)
 
-## 2.从头部插入
+## 1.2从头部插入
 queue_demo.appendleft(1)
 print(queue_demo)
 
