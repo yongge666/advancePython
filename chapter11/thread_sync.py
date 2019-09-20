@@ -1,4 +1,4 @@
-from threading import Lock, RLock, Condition #可重入的锁
+from threading import Thread,Lock, RLock, Condition #可重入的锁
 
 #在同一个线程里面，可以连续调用多次acquire， 一定要注意acquire的次数要和release的次数相等
 total = 0
